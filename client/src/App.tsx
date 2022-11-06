@@ -9,14 +9,19 @@ const App:React.FC = () => {
   
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  const handleAdd = () => {
-    
+  const handleAdd = (e: React.FormEvent) => {
+      e.preventDefault();
+
+      if(todo){
+        setTodos([...todos, {id: Date.now(), todo, isDone: false}]);
+        setTodo("");
+      }
   }
   
   return (
     <div className="App">
       <span className="heading">easypeasy</span>
-      <InputFeild todo={todo} setTodo={setTodo}/>
+      <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
     </div>
   );
 }
