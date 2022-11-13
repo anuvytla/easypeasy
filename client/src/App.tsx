@@ -3,6 +3,7 @@ import './App.css';
 import InputFeild from './components/InputFeild/InputFeild';
 import { Todo } from './components/model';
 import TodoList from './components/TodoList/TodoList';
+import SingleTodo from './components/SingleTodo/SingleTodo';
 
 const App:React.FC = () => {
 
