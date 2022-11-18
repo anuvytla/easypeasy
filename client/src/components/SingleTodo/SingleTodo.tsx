@@ -39,12 +39,12 @@ const SingleTodo: React.FC<Props> = ({todo,todos,setTodos}) => {
     const inputRef = useRef<HTMLInputElement>(null);
     useEffect(() => {
         inputRef.current?.focus();
-  }, [edit]);
+    }, [edit]);
     return (
         <form  className="todos_single" onSubmit={(e) => handleEdit(e,todo.id)}>
             {
                 edit? (
-                    <input value={editTodo} onChange = {(e) => setEditTodo(e.target.value)} className="todos_single--text"/>
+                    <input ref={inputRef} value={editTodo} onChange = {(e) => setEditTodo(e.target.value)} className="todos_single--text"/>
                 ): (
                     todo.isDone ? (
                         <s className="todos_single--text"> {todo.todo} </s>
