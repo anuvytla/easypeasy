@@ -7,15 +7,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: rgb(228, 224, 224);
   font-family: "Neucha", cursive;
 }
 
 .heading {
   text-transform: lowercase;
-  font-size: 50px;
+  font-size: 55px;
   margin: 30px 0;
-  color: darkturquoise;
+  color: #2a4703;
   z-index: 1;
   text-align: center;
 }
